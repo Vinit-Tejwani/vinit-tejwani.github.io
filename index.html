@@ -1,0 +1,866 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Vinit Tejwani — Mobile &amp;amp; Device Software Engineer&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>:root{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--paper:#0F1512;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--paper-dim:#151D19;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--ink:#E9EEE9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--ink-soft:#B7C4BC;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--muted:#7E8B84;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--line:#25302A;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--signal:#3EDB92;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--signal-strong:#31C081;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--amber:#E2AC5F;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--monitor-bg:#070B09;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--monitor-line:#182420;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--trace:#74FFC3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--trace-dim:#2E7A5C;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--max:880px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--wide:1180px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>*{box-sizing:border-box;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>html{scroll-behavior:smooth;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (prefers-reduced-motion: reduce){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>html{scroll-behavior:auto;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>*{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>body{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--paper);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Sans', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:17px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height:1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-webkit-font-smoothing:antialiased;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>a{color:var(--signal); text-decoration:none;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>a:hover{text-decoration:underline;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>a:focus-visible, button:focus-visible{outline:2px solid var(--signal); outline-offset:3px;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.mono{font-family:'IBM Plex Mono', monospace;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.wrap{max-width:var(--wide); margin:0 auto; padding:0 32px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.measure{max-width:var(--max);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Nav ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>header.site-nav{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:sticky; top:0; z-index:50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:rgba(15,21,18,0.92);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>backdrop-filter:blur(6px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom:1px solid var(--line);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-inner{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width:var(--wide); margin:0 auto; padding:16px 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex; align-items:center; justify-content:space-between;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.mark{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex; align-items:center; gap:10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:var(--ink); letter-spacing:0.02em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.mark-box{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:28px; height:28px; border:1.5px solid var(--ink); border-radius:3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex; align-items:center; justify-content:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:relative; overflow:hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.mark-box svg{width:100%; height:100%;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.links{display:flex; gap:28px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.links a{color:var(--ink-soft); font-size:15px; position:relative; padding-bottom:3px; transition:color .25s ease;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.links a:hover{color:var(--signal); text-decoration:none;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.links a::after{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content:""; position:absolute; left:0; right:100%; bottom:0; height:1.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--signal); transition:right .3s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.links a.active{color:var(--signal);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>nav.links a.active::after{right:0;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>section[id], footer[id]{scroll-margin-top:76px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.nav-toggle{display:none; background:none; border:1px solid var(--ink); border-radius:3px; padding:6px 10px; font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink); cursor:pointer;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:720px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav.links{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position:absolute; top:100%; left:0; right:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background:var(--paper); border-bottom:1px solid var(--line);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-direction:column; padding:12px 32px 20px; gap:14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display:none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav.links.open{display:flex;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav-toggle{display:inline-block;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Hero ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:88px 0 72px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:960px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero{grid-template-columns:1fr; gap:44px; padding:56px 0 48px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.kicker{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin:0 0 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>h1.headline{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:clamp(30px, 3.6vw, 44px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height:1.2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight:600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin:0 0 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width:17ch;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing:-0.01em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.sub{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:17px; color:var(--ink-soft); max-width:48ch; margin:0 0 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-row{display:flex; gap:14px; flex-wrap:wrap;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:13px 22px; border-radius:3px; cursor:pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:inline-block; transition:background .25s ease, border-color .25s ease, color .25s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-primary{background:var(--signal); color:#07130D; border:1px solid var(--signal); font-weight:500;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-primary:hover{background:var(--signal-strong); border-color:var(--signal-strong); text-decoration:none;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-ghost{background:transparent; color:var(--ink-soft); border:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btn-ghost:hover{border-color:var(--signal); color:var(--signal); text-decoration:none;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.instrument{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border:1px solid var(--monitor-line); border-radius:6px; overflow:hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.monitor{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--monitor-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:24px 24px 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow:hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.monitor-grid{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:absolute; inset:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-image:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>repeating-linear-gradient(to right, var(--monitor-line) 0 1px, transparent 1px 24px),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>repeating-linear-gradient(to bottom, var(--monitor-line) 0 1px, transparent 1px 24px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>opacity:0.55;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.monitor-head{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex; justify-content:space-between; align-items:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:12px; color:#7FBFA2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:relative; margin-bottom:6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.monitor-head .dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--trace); margin-right:6px; box-shadow:0 0 6px var(--trace);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trace-wrap{position:relative; height:120px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trace-wrap svg{width:100%; height:100%; display:block;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trace-path{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>fill:none; stroke:var(--trace); stroke-width:2; stroke-linecap:round; stroke-linejoin:round;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>filter:drop-shadow(0 0 4px rgba(87,240,174,0.55));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>stroke-dasharray:900;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>stroke-dashoffset:900;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>animation:draw 3.2s linear infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@keyframes draw{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>0%{stroke-dashoffset:900;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>70%{stroke-dashoffset:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>100%{stroke-dashoffset:-40;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (prefers-reduced-motion: reduce){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.trace-path{animation:none; stroke-dashoffset:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.monitor-foot{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex; gap:20px; flex-wrap:wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:12px; color:#6E9C87;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:relative; margin-top:8px; padding-top:12px; border-top:1px solid var(--monitor-line);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.monitor-foot b{color:#9FE3C4; font-weight:500;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.stats{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-columns:repeat(2,1fr); gap:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--paper-dim);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.stat{padding:22px 20px; border-top:1px solid var(--monitor-line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.stat:nth-child(odd){border-right:1px solid var(--monitor-line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.stat .num{font-family:'IBM Plex Mono', monospace; font-size:25px; font-weight:600; color:var(--signal); letter-spacing:-0.01em;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.stat .lbl{font-size:12.5px; color:var(--muted); margin-top:6px; line-height:1.4;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Section shell ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>section{padding:64px 0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-head{margin-bottom:36px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-head .kicker{margin-bottom:8px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>h2.section-title{font-size:28px; font-weight:600; margin:0; letter-spacing:-0.01em;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>hr.rule{border:none; border-top:1px solid var(--line); margin:0;}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Experience: animated timeline ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline{position:relative;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-columns:170px 28px 1fr; gap:20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:32px 0; border-top:1px solid var(--line);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row:last-child{border-bottom:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-when{font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--muted); padding-top:29px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-dotcol{position:relative; display:flex; justify-content:center;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-dotcol::before{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content:""; position:absolute; top:-32px; bottom:-32px; left:50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:2px; background:var(--line); transform:translateX(-50%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row:first-child .timeline-dotcol::before{top:34px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row:last-child .timeline-dotcol::before{bottom:calc(100% - 34px);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-dotcol::after{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content:""; position:absolute; top:-32px; bottom:-32px; left:50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:2px; background:var(--signal); transform:translateX(-50%) scaleY(0);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform-origin:top; transition:transform .7s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row:first-child .timeline-dotcol::after{top:34px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row.is-active .timeline-dotcol::after{transform:translateX(-50%) scaleY(1);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-dot{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:11px; height:11px; border-radius:50%; margin-top:29px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--paper); border:2px solid var(--muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:relative; z-index:1; flex-shrink:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition:border-color .4s ease, background-color .4s ease, box-shadow .4s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row.is-active .timeline-dot{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-color:var(--signal); background:var(--signal);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow:0 0 0 5px rgba(62,219,146,0.16);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.row-content{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-row.is-active .row-content{opacity:1; transform:translateY(0);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-role{font-size:19px; font-weight:600; margin:0 0 2px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.timeline-org{color:var(--signal-strong); font-size:15px; margin:0 0 14px; font-weight:500;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.row-content ul{margin:0; padding-left:18px; color:var(--ink-soft);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.row-content li{margin-bottom:6px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:640px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.timeline-row{grid-template-columns:24px 1fr; gap:14px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.timeline-when{display:none;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.timeline-dotcol::before, .timeline-dotcol::after{top:-32px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Generic scroll reveal ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.reveal.is-visible{opacity:1; transform:translateY(0);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Projects: compact expandable card grid ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.projects-grid{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-columns:1fr 1fr; gap:1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--line); border:1px solid var(--line); border-radius:4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow:hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:880px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.projects-grid{grid-template-columns:1fr;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-card{background:var(--paper); padding:30px 32px 28px; display:flex; flex-direction:column;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.p-tag{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--amber); margin:0 0 10px; text-transform:none;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.p-title{font-size:19px; font-weight:600; margin:0 0 10px; letter-spacing:-0.01em;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.p-desc{color:var(--ink-soft); margin:0 0 18px; font-size:15px; max-width:48ch;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.p-chips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.p-chip{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border:1px solid var(--line); border-radius:3px; padding:5px 9px; line-height:1.2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-toggle{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top:auto; align-self:flex-start;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:inline-flex; align-items:center; gap:8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:none; border:1px solid var(--line); border-radius:3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:12.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:9px 14px; cursor:pointer; transition:border-color .2s ease, color .2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-toggle:hover{border-color:var(--signal); color:var(--signal);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-toggle .chev{transition:transform .3s ease; font-size:11px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-card.open .proj-toggle .chev{transform:rotate(180deg);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-card.open .proj-toggle{border-color:var(--signal-strong); color:var(--signal-strong);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-detail{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-rows:0fr; transition:grid-template-rows .4s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-detail &gt; div{overflow:hidden;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-card.open .proj-detail{grid-template-rows:1fr;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.proj-detail-inner{padding-top:20px; margin-top:18px; border-top:1px dashed var(--monitor-line);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.specs{width:100%; border-collapse:collapse; font-family:'IBM Plex Mono', monospace; font-size:13px; margin-bottom:16px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.specs tr{border-top:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.specs tr:last-child{border-bottom:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.specs td{padding:8px 0; vertical-align:top;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.specs td:first-child{color:var(--muted); width:40%; padding-right:12px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.specs td:last-child{color:var(--ink);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.p-diagram{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border:1px solid var(--monitor-line); border-radius:4px; background:var(--monitor-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:18px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.node{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border:1px solid var(--ink-soft); border-radius:3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:7px 9px; background:transparent; color:var(--ink);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height:1.3; text-align:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.node.accent{border-color:var(--signal-strong); color:var(--signal-strong);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.node.amber{border-color:var(--amber); color:var(--amber);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.arrow{color:var(--muted); font-family:'IBM Plex Mono', monospace; font-size:14px; padding:0 2px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.flow-row{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.flow-row:last-child{margin-bottom:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.diagram-caption{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted); margin-top:14px; padding-top:12px; border-top:1px dashed var(--monitor-line);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* grants pair */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grants{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top:1px solid var(--line); margin-top:40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-columns:1fr 1fr; gap:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grant{padding:32px 32px 0; border-left:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grant:first-child{border-left:none; padding-left:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grant:last-child{padding-right:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grant-amt{font-family:'IBM Plex Mono', monospace; color:var(--signal); font-size:20px; font-weight:600; margin-bottom:6px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grant h3{font-size:17px; margin:0 0 6px; font-weight:600;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.grant p{color:var(--ink-soft); margin:0; max-width:40ch; font-size:14.5px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:640px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.grants{grid-template-columns:1fr;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.grant{border-left:none; padding:24px 0 0; border-top:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.grant:first-child{border-top:none;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Skills ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.skill-row{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid; grid-template-columns:220px 1fr; gap:24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:20px 0; border-top:1px solid var(--line);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.skill-row:last-child{border-bottom:1px solid var(--line);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.skill-cat{font-weight:600; font-size:15px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.skill-items{color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:14px; line-height:1.9;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:640px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.skill-row{grid-template-columns:1fr; gap:6px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Education / achievements ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.two-col{display:grid; grid-template-columns:1fr 1fr; gap:56px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@media (max-width:720px){.two-col{grid-template-columns:1fr; gap:32px;}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.edu-item{margin-bottom:22px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.edu-item:last-child{margin-bottom:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.edu-item .deg{font-weight:600; font-size:16px; margin-bottom:2px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.edu-item .school{color:var(--ink-soft); font-size:14.5px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.edu-item .when{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--muted); margin-top:2px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.ach-item{display:flex; gap:14px; margin-bottom:18px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.ach-item:last-child{margin-bottom:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.ach-mark{font-family:'IBM Plex Mono', monospace; color:var(--signal); font-weight:600; flex-shrink:0;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.ach-item p{margin:0; color:var(--ink-soft);}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.ach-item strong{color:var(--ink);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------- Footer / Contact ---------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>footer{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:var(--monitor-bg); color:#C9D8D0; margin-top:40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:relative; overflow:hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>footer .monitor-grid{opacity:0.35;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-inner{max-width:var(--wide); margin:0 auto; padding:64px 32px 40px; position:relative;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-flat{height:2px; background:var(--trace-dim); position:relative; margin-bottom:44px; overflow:hidden; border-radius:2px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-flat::after{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content:""; position:absolute; top:0; left:0; height:100%; width:40%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:linear-gradient(90deg, transparent, var(--trace), transparent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>animation:sweep 3.5s linear infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@keyframes sweep{0%{left:-40%;} 100%{left:100%;}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>footer h2{color:#fff; font-size:30px; max-width:16ch; margin:0 0 20px; font-weight:600;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-links{display:flex; flex-wrap:wrap; gap:28px; margin-bottom:48px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-links a{color:#9FE3C4; font-family:'IBM Plex Mono', monospace; font-size:14.5px;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-links a:hover{color:#fff;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.foot-bottom{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top:1px solid var(--monitor-line); padding-top:20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:#5F7A6E;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;header class="site-nav"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="nav-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mark"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="mark-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;svg viewBox="0 0 28 28"&gt;&lt;polyline points="2,16 9,16 12,7 16,21 19,16 26,16" fill="none" stroke="#3EDB92" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/&gt;&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Vinit Tejwani</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks"&gt;Menu&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav class="links" id="navLinks"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#work"&gt;Work&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#projects"&gt;Projects&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#skills"&gt;Skills&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;main class="wrap"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- HERO --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="hero-copy"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="kicker"&gt;Lead Software Engineer, Mobile — Artem Health Tech&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h1 class="headline"&gt;I write the software that connects medical devices, hospital systems, and the people who rely on them.&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="sub"&gt;2.5+ years building Flutter and native applications for healthcare technology — ECG devices, connected diagnostic hardware, and hospital record systems — plus a pair of IoT side projects backed by government innovation grants. Based in Ahmedabad, India.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="btn-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn btn-primary" href="#projects" data-scroll&gt;See the work&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn btn-ghost" href="#contact" data-scroll&gt;Get in touch&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="instrument" id="heroInstrument"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="monitor"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="monitor-grid" aria-hidden="true"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="monitor-head"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;&lt;span class="dot"&gt;&lt;/span&gt;lead II&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;500 Hz · 10 s capture&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="trace-wrap"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;svg viewBox="0 0 900 130" preserveAspectRatio="none"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path class="trace-path" d="M0,66 L60,66 L80,66 L92,30 L104,100 L116,20 L128,80 L140,66 L200,66 L260,66 L280,66 L292,30 L304,100 L316,20 L328,80 L340,66 L400,66 L460,66 L480,66 L492,30 L504,100 L516,20 L528,80 L540,66 L600,66 L660,66 L680,66 L692,30 L704,100 L716,20 L728,80 L740,66 L800,66 L900,66"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="monitor-foot"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;signal: &lt;b&gt;stable&lt;/b&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;rate: &lt;b&gt;72 bpm&lt;/b&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;channel: &lt;b&gt;USB / lead-II&lt;/b&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="stats"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;&lt;div class="num" data-target="8" data-suffix="+"&gt;0+&lt;/div&gt;&lt;div class="lbl"&gt;Healthcare apps shipped&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;&lt;div class="num" data-target="99.2" data-suffix="%"&gt;0%&lt;/div&gt;&lt;div class="lbl"&gt;Production uptime&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;&lt;div class="num" data-target="500" data-suffix="/s"&gt;0/s&lt;/div&gt;&lt;div class="lbl"&gt;ECG samples per channel&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;&lt;div class="num" data-target="2.5" data-suffix="+"&gt;0+&lt;/div&gt;&lt;div class="lbl"&gt;Years in production mobile&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- WORK / EXPERIENCE --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="work"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="kicker"&gt;Work&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;Where the experience comes from&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="timeline"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="timeline-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="timeline-when"&gt;Aug 2024 — Present&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="timeline-dotcol"&gt;&lt;div class="timeline-dot"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="row-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="timeline-role"&gt;Lead Software Engineer, Mobile&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="timeline-org"&gt;Artem Health Tech Pvt. Ltd. · promoted from Associate Mobile App Developer&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Directs mobile development and technical decisions across 8+ cross-platform healthcare applications&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Sets Clean Architecture and BLoC conventions, and documents them for the wider engineering team&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Cut load times 40% through REST API work and resolved 100+ production issues, lifting user retention 25%&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Built reusable UI libraries and data-encryption modules, raising code reuse 45%&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="timeline-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="timeline-when"&gt;Jan 2024 — Jul 2024&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="timeline-dotcol"&gt;&lt;div class="timeline-dot"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="row-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="timeline-role"&gt;Software Engineer Intern, BLE &amp;amp; IoT&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="timeline-org"&gt;Wellnest Tech&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Built a BLE-enabled iOS app in Swift and MVVM for real-time ECG monitoring and analysis in under 10 seconds&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Paired medical-grade hardware over CoreBluetooth at 99% data transmission reliability&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Named Intern of the Quarter for diagnostic software features shipped with zero critical bugs in production&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="timeline-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="timeline-when"&gt;May 2023 — Jun 2023&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="timeline-dotcol"&gt;&lt;div class="timeline-dot"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="row-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="timeline-role"&gt;Software Engineer Intern, Backend &amp;amp; Mobile&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="timeline-org"&gt;Samudra Technologies&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Engineered a publish-subscribe messaging architecture handling 1,000+ concurrent connections at sub-100ms latency&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Built desktop and mobile IoT clients over MQTT for real-time telemetry at 99.5% uptime&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- PROJECTS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="projects"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="kicker"&gt;Projects&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;What the systems actually do&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="projects-grid reveal"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="proj-card" data-proj&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-tag"&gt;device · mobile + desktop&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 class="p-title"&gt;ECG capture &amp;amp; reporting system&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-desc"&gt;Turns a USB ECG acquisition device into a full diagnostic workflow — capture, live render, report — from one Flutter codebase on mobile and desktop.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="p-chips"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;Flutter&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;Java + C++ bridges&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;500 samples/sec&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button class="proj-toggle" type="button" aria-expanded="false"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="label"&gt;Show technical breakdown&lt;/span&gt;&lt;span class="chev"&gt;▾&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="proj-detail"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="proj-detail-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;table class="specs"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Sample rate&lt;/td&gt;&lt;td&gt;500 samples/sec, streamed continuously over USB&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Capture window&lt;/td&gt;&lt;td&gt;10-second guided ECG capture per patient&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Mobile bridge&lt;/td&gt;&lt;td&gt;Java native layer → Pigeon → Dart/Flutter UI&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Desktop bridge&lt;/td&gt;&lt;td&gt;C++ native layer → Pigeon → Dart/Flutter UI&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Output&lt;/td&gt;&lt;td&gt;Live waveform rendering + generated ECG report&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/table&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="p-diagram"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node"&gt;USB ECG device&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;&lt;span class="node"&gt;Java (mobile)&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node"&gt;USB ECG device&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;&lt;span class="node"&gt;C++ (desktop)&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node accent"&gt;Pigeon bridge&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;&lt;span class="node accent"&gt;Flutter / Dart UI&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;&lt;span class="node"&gt;Live graph + report&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="diagram-caption"&gt;Same Dart UI layer, two native transports — one per host platform.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="proj-card" data-proj&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-tag"&gt;device · iOS, BLE&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 class="p-title"&gt;BLE ECG monitor&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-desc"&gt;Wellnest Tech's wireless counterpart to the USB system. A Swift, MVVM app pairs with the ECG hardware over Bluetooth and analyzes a reading in under ten seconds.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="p-chips"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;Swift · MVVM&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;CoreBluetooth&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;99% reliability&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button class="proj-toggle" type="button" aria-expanded="false"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="label"&gt;Show technical breakdown&lt;/span&gt;&lt;span class="chev"&gt;▾&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="proj-detail"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="proj-detail-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;table class="specs"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Platform&lt;/td&gt;&lt;td&gt;iOS, Swift, MVVM&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Transport&lt;/td&gt;&lt;td&gt;Bluetooth Low Energy via CoreBluetooth&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Analysis window&lt;/td&gt;&lt;td&gt;Under 10 seconds from capture to result&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Reliability&lt;/td&gt;&lt;td&gt;99% data transmission reliability&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/table&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="p-diagram"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node"&gt;ECG hardware&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;&lt;span class="node amber"&gt;CoreBluetooth pairing&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node accent"&gt;Swift · MVVM app&lt;/span&gt;&lt;span class="arrow"&gt;→&lt;/span&gt;&lt;span class="node"&gt;Live analysis &amp;lt;10s&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="diagram-caption"&gt;No cables — same clinical goal, a BLE transport instead of USB.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="proj-card" data-proj&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-tag"&gt;device · network diagnostics&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 class="p-title"&gt;Pill dispensing machine monitor&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-desc"&gt;Finds a pill dispensing machine on the local network over mDNS, then walks every mechanical subsystem through a command-and-response health check.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="p-chips"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;mDNS discovery&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;4 subsystems&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;Live status UI&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button class="proj-toggle" type="button" aria-expanded="false"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="label"&gt;Show technical breakdown&lt;/span&gt;&lt;span class="chev"&gt;▾&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="proj-detail"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="proj-detail-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;table class="specs"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Discovery&lt;/td&gt;&lt;td&gt;mDNS, zero-config local network discovery&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Subsystems checked&lt;/td&gt;&lt;td&gt;Light sensors, motor, scissor mechanism, tray&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Pattern&lt;/td&gt;&lt;td&gt;App sends a diagnostic command, machine responds, status renders live&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/table&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="p-diagram"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node"&gt;App&lt;/span&gt;&lt;span class="arrow"&gt;⇄&lt;/span&gt;&lt;span class="node amber"&gt;mDNS discovery&lt;/span&gt;&lt;span class="arrow"&gt;⇄&lt;/span&gt;&lt;span class="node"&gt;Dispensing machine&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row" style="margin-top:12px;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node"&gt;Light sensor&lt;/span&gt;&lt;span class="node"&gt;Motor&lt;/span&gt;&lt;span class="node"&gt;Scissor&lt;/span&gt;&lt;span class="node"&gt;Tray&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="arrow"&gt;↓ command / response ↓&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node accent"&gt;Health status UI&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="diagram-caption"&gt;Every subsystem is polled independently and rolled up into one status view.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="proj-card" data-proj&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-tag"&gt;healthcare · HMIS integration&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 class="p-title"&gt;Doctor &amp;amp; Citizen apps&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="p-desc"&gt;Two apps on one Hospital Management Information System already in use at major hospitals — clinical workflows for doctors, records and services for patients.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="p-chips"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;Shared backend&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;HMIS portal&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="p-chip"&gt;2 front doors&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button class="proj-toggle" type="button" aria-expanded="false"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="label"&gt;Show technical breakdown&lt;/span&gt;&lt;span class="chev"&gt;▾&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="proj-detail"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="proj-detail-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;table class="specs"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Apps&lt;/td&gt;&lt;td&gt;Doctor app + Citizen app, shared backend&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Integration&lt;/td&gt;&lt;td&gt;Hospital HMIS portal&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;&lt;td&gt;Audience&lt;/td&gt;&lt;td&gt;Clinical staff at major hospitals, and their patients&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/table&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="p-diagram"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node accent"&gt;HMIS portal&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flow-row" style="margin-top:10px;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="arrow"&gt;↙&lt;/span&gt;&lt;span class="node"&gt;Doctor app&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span style="width:20px;"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;span class="node"&gt;Citizen app&lt;/span&gt;&lt;span class="arrow"&gt;↘&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="diagram-caption"&gt;One clinical record, two front doors — for staff and for patients.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="grants reveal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="grant"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grant-amt mono"&gt;₹30,000&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Parkito&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;An IoT smart parking system, funded by an SSIP government grant.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="grant"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grant-amt mono"&gt;₹12,000&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;EDU Rush&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;An interactive educational game, funded by an SSIP government grant.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- SKILLS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="skills"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section-head"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="kicker"&gt;Skills&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;The stack behind all of it&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="skill-row reveal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;Languages&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-items"&gt;Dart · Swift · Java · C++ · C#&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="skill-row reveal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;Core technologies&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-items"&gt;Flutter · Android SDK · iOS SDK · .NET · REST APIs&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="skill-row reveal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;Architecture &amp;amp; patterns&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-items"&gt;Clean Architecture · BLoC · MVVM · MVC · Repository pattern · Dependency injection&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="skill-row reveal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;Tools &amp;amp; infrastructure&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="skill-items"&gt;Git · Firebase · MQTT · SQLite · Hive · Core Data · Xcode · Android Studio&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- EDUCATION + ACHIEVEMENTS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section id="education"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="two-col reveal"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="kicker"&gt;Education&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="edu-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="deg"&gt;B.E., Computer Engineering&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="school"&gt;MBIT CVM University, Anand, Gujarat&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="when"&gt;Jan 2020 — May 2024&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="edu-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="deg"&gt;Minor, Internet of Things&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="school"&gt;MBIT CVM University, Anand, Gujarat&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="when"&gt;Sep 2021 — May 2023&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="kicker"&gt;Achievements&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="ach-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="ach-mark"&gt;＋&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;SSIP government grants&lt;/strong&gt; for Parkito (₹30,000) and EDU Rush (₹12,000)&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="ach-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="ach-mark"&gt;＋&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Intern of the Quarter&lt;/strong&gt;, Wellnest Tech — diagnostic software features shipped with zero critical bugs in production&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;footer id="contact"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="monitor-grid" aria-hidden="true"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="foot-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="kicker" style="color:#6E9C87;"&gt;Contact&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Hiring, collaborating, or just have a question? I'd like to hear from you.&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="foot-flat"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="foot-links"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="mailto:vinittejwani20@gmail.com"&gt;vinittejwani20@gmail.com&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="tel:+916353725669"&gt;+91 63537 25669&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.linkedin.com/in/vinit-tejwani-b59724221/" target="_blank" rel="noopener"&gt;linkedin.com/in/vinit-tejwani&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="foot-bottom"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span&gt;Vinit Tejwani — Ahmedabad, Gujarat, India&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span&gt;Usually replies within a day&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const toggle = document.getElementById('navToggle');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const links = document.getElementById('navLinks');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>toggle.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const open = links.classList.toggle('open');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>toggle.setAttribute('aria-expanded', open ? 'true' : 'false');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const navAnchors = Array.from(links.querySelectorAll('a'));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Every in-page anchor — nav links AND the hero buttons — routes through</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// the same handler, so "See the work" / "Get in touch" behave identically</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// to the nav and correctly account for the sticky header offset.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const allInPageLinks = Array.from(document.querySelectorAll('a[href^="#"]'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>allInPageLinks.forEach(a =&gt; a.addEventListener('click', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const href = a.getAttribute('href');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(!href || href.length &lt; 2) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const target = document.querySelector(href);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(target){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>target.scrollIntoView({behavior:'smooth', block:'start'});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>links.classList.remove('open');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>toggle.setAttribute('aria-expanded', 'false');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Project card accordions — one panel's technical breakdown at a time</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.querySelectorAll('[data-proj]').forEach(card =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const btn = card.querySelector('.proj-toggle');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const label = btn.querySelector('.label');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>btn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const isOpen = card.classList.toggle('open');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>label.textContent = isOpen ? 'Hide technical breakdown' : 'Show technical breakdown';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Reveal timeline rows and general sections as they scroll into view</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const timelineRows = document.querySelectorAll('.timeline-row');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const revealEls = document.querySelectorAll('.reveal');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const revealObserver = new IntersectionObserver((entries) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>entries.forEach(entry =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(entry.isIntersecting){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>entry.target.classList.add('is-active', 'is-visible');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>revealObserver.unobserve(entry.target);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}, {threshold:0.2, rootMargin:'0px 0px -8% 0px'});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>timelineRows.forEach(row =&gt; revealObserver.observe(row));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>revealEls.forEach(el =&gt; revealObserver.observe(el));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Scroll-spy: highlight the nav link for whichever section is in view</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const sections = ['work','projects','skills','education','contact']</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.map(id =&gt; document.getElementById(id))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.filter(Boolean);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const spyObserver = new IntersectionObserver((entries) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>entries.forEach(entry =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const link = links.querySelector(`a[href="#${entry.target.id}"]`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(!link) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(entry.isIntersecting){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>navAnchors.forEach(a =&gt; a.classList.remove('active'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>link.classList.add('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}, {rootMargin:'-45% 0px -50% 0px', threshold:0});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>sections.forEach(sec =&gt; spyObserver.observe(sec));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Count up the hero stats once, when the instrument card comes into view</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const instrument = document.getElementById('heroInstrument');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const numEls = instrument ? instrument.querySelectorAll('.num[data-target]') : [];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>function animateCount(el){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const target = parseFloat(el.getAttribute('data-target'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const suffix = el.getAttribute('data-suffix') || '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const isDecimal = String(target).includes('.');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(reduceMotion){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>el.textContent = target + suffix;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const duration = 1100;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const start = performance.now();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function tick(now){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const progress = Math.min((now - start) / duration, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const eased = 1 - Math.pow(1 - progress, 3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const value = target * eased;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>el.textContent = (isDecimal ? value.toFixed(1) : Math.round(value)) + suffix;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(progress &lt; 1) requestAnimationFrame(tick);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>requestAnimationFrame(tick);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(instrument &amp;&amp; numEls.length){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const countObserver = new IntersectionObserver((entries) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>entries.forEach(entry =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if(entry.isIntersecting){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>numEls.forEach(animateCount);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>countObserver.unobserve(entry.target);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}, {threshold:0.4});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>countObserver.observe(instrument);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
